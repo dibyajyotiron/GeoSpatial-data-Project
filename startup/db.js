@@ -4,7 +4,6 @@ module.exports = function() {
   mongoose
     .connect(
       "mongodb://localhost:27017/auth_user",
-      // "mongodb://dibyajyoti_ghosal:Aparnaroy2011@ds215633.mlab.com:15633/nodejs_interview",
       { useNewUrlParser: true }
     )
     .then(() => {
@@ -15,5 +14,5 @@ module.exports = function() {
     });
 };
 
-// DB keys are provided just for this interview, in real world application,
+// DB keys are provided just for this interview as it's local db, in real world application,
 // it should be kept in environment variables!
