@@ -255,13 +255,12 @@ router.delete(
         poly.classId -= 1;
         await poly.save();
       }
-      // console.log(cur);
     });
-    const filteredClassIdPoly = allPolyByUser.filter(
-      el => el.classId !== foundPolygon.classId
-    );
-    // console.log(reduceClassIdPoly);
-    return res.send(filteredClassIdPoly);
+
+    return res.json({
+      err: false,
+      message: "Successfully deleted the polygon!"
+    });
   })
 );
 
